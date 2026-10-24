@@ -1,0 +1,263 @@
+.page {
+  display: grid;
+  grid-template-columns: 650px minmax(0, 886px);
+  width: 100%;
+  max-width: 1536px;
+  min-height: 1042px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+.leftSection,
+.rightSection {
+  min-width: 0;
+}
+
+.leftSection {
+  padding: 202px 71px 0 175px;
+}
+
+.formContent {
+  width: 404px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.formContent h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+.fields {
+  display: grid;
+  gap: 19.7px;
+  margin-top: 62.5px;
+}
+
+.fields label {
+  display: grid;
+  height: 58px;
+}
+
+.fields label > span {
+  height: 21px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.fields input {
+  width: 100%;
+  height: 32px;
+  padding: 8px 10px;
+  color: #000;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  outline: none;
+}
+
+.fields input::placeholder {
+  color: #d9d9d9;
+  opacity: 1;
+}
+
+.fields input:focus-visible {
+  border-color: #3a5b22;
+  box-shadow: 0 0 0 2px rgb(58 91 34 / 18%);
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  height: 15.32px;
+  margin-top: 19.7px;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 13.5px;
+}
+
+.terms input {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  accent-color: #3a5b22;
+}
+
+.terms a {
+  color: inherit;
+}
+
+.signupButton {
+  width: 100%;
+  height: 32px;
+  margin-top: 29.55px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19.5px;
+  cursor: pointer;
+  background: #3a5b22;
+  border: 1px solid #3a5b22;
+  border-radius: 10px;
+}
+
+.signupButton:hover {
+  background: #304c1c;
+}
+
+.signupButton:focus-visible,
+.socialButtons button:focus-visible,
+.signInPrompt a:focus-visible,
+.terms a:focus-visible {
+  outline: 2px solid #3a5b22;
+  outline-offset: 2px;
+}
+
+.divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15.32px;
+  margin-top: 62.1px;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 13.5px;
+}
+
+.divider::before {
+  position: absolute;
+  inset: 50% 0 auto;
+  height: 2px;
+  content: '';
+  background: #f5f5f5;
+  transform: translateY(-50%);
+}
+
+.divider span {
+  position: relative;
+  padding: 0 4.5px;
+  background: #fff;
+}
+
+.socialButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 190px);
+  gap: 23px;
+  margin-top: 60px;
+}
+
+.socialButtons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 32px;
+  padding: 4px 20px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+}
+
+.socialButtons img {
+  width: 24px;
+  height: 24px;
+}
+
+.signInPrompt {
+  margin: 25px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+
+.signInPrompt a {
+  color: #0c2991;
+  text-decoration: none;
+}
+
+.rightSection {
+  padding-top: 78px;
+}
+
+.rightSection img {
+  display: block;
+  width: 828px;
+  height: 936px;
+  object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+  .page {
+    grid-template-columns: 55% 45%;
+    min-height: 100svh;
+  }
+
+  .rightSection {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .leftSection {
+    padding: 96px 48px;
+  }
+
+  .rightSection img {
+    width: 100%;
+    height: auto;
+    max-height: 90svh;
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    display: block;
+    min-height: 100svh;
+  }
+
+  .leftSection {
+    padding: 48px 24px;
+  }
+
+  .formContent {
+    width: min(100%, 404px);
+  }
+
+  .rightSection {
+    min-height: 100svh;
+  }
+
+  .rightSection img {
+    max-height: 100svh;
+  }
+}
+
+@media (max-width: 460px) {
+  .formContent h1 {
+    font-size: 28px;
+  }
+
+  .socialButtons {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .socialButtons button {
+    width: 100%;
+  }
+}
