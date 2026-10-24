@@ -63,7 +63,7 @@ function Login() {
           </div>
 
           <p className={styles.signInPrompt}>
-            Have an account? <a href="#sign-in">Sign In</a>
+            Don’t have an account? <a href="#sign-up">Sign Up</a>
           </p>
         </form>
       </section>
