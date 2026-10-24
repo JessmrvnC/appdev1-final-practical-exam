@@ -15,16 +15,6 @@ function Login() {
 
           <div className={styles.fields}>
             <label>
-              <span>Name</span>
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter your name"
-                autoComplete="name"
-              />
-            </label>
-
-            <label>
               <span>Email address</span>
               <input
                 type="email"
@@ -35,25 +25,26 @@ function Login() {
             </label>
 
             <label>
-              <span>Password</span>
+              <span className={styles.passwordLabel}>
+                <span>Password</span>
+                <a href="#forgot-password">forgot password</a>
+              </span>
               <input
                 type="password"
                 name="password"
-                placeholder="Name"
-                autoComplete="new-password"
+                placeholder="Enter your password"
+                autoComplete="current-password"
               />
             </label>
           </div>
 
-          <label className={styles.terms}>
-            <input type="checkbox" name="terms" />
-            <span>
-              I agree to the <a href="#terms">terms &amp; policy</a>
-            </span>
+          <label className={styles.remember}>
+            <input type="checkbox" name="remember" />
+            <span>Remember for 30 days</span>
           </label>
 
-          <button className={styles.signupButton} type="button">
-            Signup
+          <button className={styles.loginButton} type="button">
+            Login
           </button>
 
           <div className={styles.divider} aria-hidden="true">
