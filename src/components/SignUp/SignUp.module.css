@@ -6,6 +6,7 @@
   min-height: var(--page-min-height);
   margin: 0 auto;
   overflow: hidden;
+  color: var(--color-text);
   background: var(--color-surface);
 }
 
