@@ -6,9 +6,12 @@ import styles from './Login.module.css'
 function Login() {
   return (
     <main className={styles.page}>
-      <section className={styles.leftSection} aria-labelledby="signup-title">
+      <section className={styles.leftSection} aria-labelledby="login-title">
         <form className={styles.formContent}>
-          <h1 id="signup-title">Get Started Now</h1>
+          <h1 id="login-title">Welcome back!</h1>
+          <p className={styles.subtitle}>
+            Enter your Credentials to access your account
+          </p>
 
           <div className={styles.fields}>
             <label>

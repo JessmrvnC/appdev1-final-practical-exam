@@ -15,7 +15,7 @@
 }
 
 .leftSection {
-  padding: 202px 71px 0 175px;
+  padding: 230px 71px 0 175px;
 }
 
 .formContent {
@@ -28,6 +28,13 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 48px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
 }
 
 .fields {
