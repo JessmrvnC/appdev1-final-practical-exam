@@ -38,6 +38,7 @@
 
 .fields label {
   display: grid;
+  height: 58px;
 }
 
 .fields label > span {
@@ -75,6 +76,7 @@
   align-items: center;
   gap: 6px;
   width: max-content;
+  height: 15.32px;
   margin-top: 19.7px;
   font-size: 9px;
   font-weight: 500;
@@ -95,7 +97,7 @@
 .signupButton {
   width: 100%;
   height: 32px;
-  margin-top: 29.5px;
+  margin-top: 29.55px;
   color: #fff;
   font-size: 13px;
   font-weight: 700;
@@ -111,9 +113,81 @@
 }
 
 .signupButton:focus-visible,
+.socialButtons button:focus-visible,
+.signInPrompt a:focus-visible,
 .terms a:focus-visible {
   outline: 2px solid #3a5b22;
   outline-offset: 2px;
+}
+
+.divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15.32px;
+  margin-top: 62.1px;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 13.5px;
+}
+
+.divider::before {
+  position: absolute;
+  inset: 50% 0 auto;
+  height: 2px;
+  content: '';
+  background: #f5f5f5;
+  transform: translateY(-50%);
+}
+
+.divider span {
+  position: relative;
+  padding: 0 4.5px;
+  background: #fff;
+}
+
+.socialButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 190px);
+  gap: 23px;
+  margin-top: 60px;
+}
+
+.socialButtons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 32px;
+  padding: 4px 20px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+}
+
+.socialButtons img {
+  width: 24px;
+  height: 24px;
+}
+
+.signInPrompt {
+  margin: 25px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+
+.signInPrompt a {
+  color: #0c2991;
+  text-decoration: none;
 }
 
 .rightSection {
@@ -170,5 +244,20 @@
 
   .rightSection img {
     max-height: 100svh;
+  }
+}
+
+@media (max-width: 460px) {
+  .formContent h1 {
+    font-size: 28px;
+  }
+
+  .socialButtons {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .socialButtons button {
+    width: 100%;
   }
 }

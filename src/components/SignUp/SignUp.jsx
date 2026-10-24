@@ -1,4 +1,6 @@
+import appleLogo from '../../assets/icons-apple-logo.svg'
 import flowerImage from '../../assets/blossom-flower.svg'
+import googleLogo from '../../assets/icons-google-logo.svg'
 import styles from './SignUp.module.css'
 
 function SignUp() {
@@ -50,6 +52,25 @@ function SignUp() {
           <button className={styles.signupButton} type="button">
             Signup
           </button>
+
+          <div className={styles.divider} aria-hidden="true">
+            <span>Or</span>
+          </div>
+
+          <div className={styles.socialButtons}>
+            <button type="button">
+              <img src={googleLogo} alt="" />
+              <span>Sign in with Google</span>
+            </button>
+            <button type="button">
+              <img src={appleLogo} alt="" />
+              <span>Sign in with Apple</span>
+            </button>
+          </div>
+
+          <p className={styles.signInPrompt}>
+            Have an account? <a href="#sign-in">Sign In</a>
+          </p>
         </form>
       </section>
       <section className={styles.rightSection}>
